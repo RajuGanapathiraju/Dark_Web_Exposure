@@ -5,11 +5,11 @@ This Node.js script is designed to search for specified keywords on the dark web
 ## Prerequisites
 Before using this script, make sure you have the following dependencies installed:
 
-Node.js
+1. Node.js
 
-Tor
+2. Tor
 
-NPM packages: tor-request, cheerio, fs, async, colors
+3. NPM packages: tor-request, cheerio, fs, async, colors
 
 ## Installation
 
