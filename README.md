@@ -1,2 +1,41 @@
 # Dark_Web_Exposure
-Find valuable piece of information which is being leaked in dark web about your assets.
+
+This Node.js script is designed to search for specified keywords on the dark web using torch dark web search engine. It utilizes Tor for anonymity and Cheerio for web scraping.
+
+Prerequisites
+Before using this script, make sure you have the following dependencies installed:
+
+Node.js
+Tor
+NPM packages: tor-request, cheerio, fs, async, colors
+
+Installation
+Clone the repository:
+
+bash
+Copy code
+git clone https://github.com/your-username/dark-web-keyword-search.git
+Install dependencies:
+
+bash
+Copy code
+npm install
+Ensure Tor is running on your system.
+
+Usage
+Modify the keywords array in the index.js file to include the keywords you want to search for on the dark web.
+
+javascript
+Copy code
+const keywords = ["keyword1", "keyword2", "keyword3", "keyword4", "keyword5"];
+To run the script, execute:
+
+bash
+Copy code
+node index.js
+The script will iterate through each keyword, retrieve a token from the Omega search engine, perform the search, and save the results to HTML files.
+
+Notes
+Ensure you have Tor configured properly for anonymous browsing.
+This script is for educational purposes only. Use it responsibly and ethically.
+
