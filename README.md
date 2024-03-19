@@ -40,7 +40,7 @@ To run the script, execute:
 node index.js
 ```
 
-The script will iterate through each keyword, retrieve a token from torch dark web search engine, perform the search, and save the results to HTML files.
+The script will iterate through each keyword, retrieve a token from torch dark web search engine, perform the search, and console the results.
 
 ##Notes
 Ensure you have Tor configured properly for anonymous browsing.
