@@ -17,7 +17,7 @@ const {
 const url = 'mongodb://localhost:27017';
 const client = new MongoClient(url);
 
-const keywords = ["keyword1", "keyword2", "keyword3"];
+const keywords = ["keyword1", "keyowrd2", "keyword3","keyword4","keyword5"];
 
 
 async function start() {
@@ -143,7 +143,7 @@ async function htmlReport() {
 
         const Results = await collection.find(query, { projection }).toArray();
 
-        if (results.length > 0) {
+        if (Results.length > 0) {
             let html = `<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -166,7 +166,7 @@ async function htmlReport() {
     </thead>
     <tbody>`;
 
-            results.forEach(result => {
+            Results.forEach(result => {
                 html += `<tr>
       <td>${result.keyword}</td>
       <td>${result.timestamp}</td>
@@ -189,7 +189,7 @@ async function htmlReport() {
             const updateResult = await collection.updateMany(query, { $set: { sent: 1 } });
             console.log(`\nHTML report generated and stored at: ${filePath}\n`);
             console.log(`\nUpdated the state for ${updateResult.modifiedCount} documents\n`);
-            process.exit(1);
+            
         } else {
             console.log('No new alerts');
             process.exit(1);
@@ -198,6 +198,15 @@ async function htmlReport() {
         console.error('Error generating HTML report:', error);
     }
 }
+
+
+
+
+
+
+
+
+
 
 }
 
